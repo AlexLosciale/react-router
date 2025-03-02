@@ -1,14 +1,21 @@
-import { BrowserRouter, Routes, Router } from "react-router-dom"
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Layout from "../components/Layout";
+import HomePage from "./pages/HomePage";
+import ChiSiamo from "./pages/ChiSiamo";
+import Posts from "./pages/Posts";
 
 function App() {
 
   return (
     <BrowserRouter>
+      <Layout />
       <Routes>
-        <Router path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/chi-siamo" element={<ChiSiamo />} />
+        <Route path="/posts" element={<Posts />} />
       </Routes>
     </BrowserRouter>
   )
-}
+};
 
-export default App
+export default App;
