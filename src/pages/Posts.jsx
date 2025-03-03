@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Posts = () => {
@@ -7,7 +8,10 @@ const Posts = () => {
   useEffect(() => {
     fetch("http://localhost:3000/blog")
       .then((res) => res.json())
-      .then((data) => setPosts(data));
+      .then((data) => {
+        console.log(data);
+        setPosts(data);
+      });
   }, []);
 
   return (
@@ -17,7 +21,9 @@ const Posts = () => {
       {posts.map((post) => (
         <div key={post.id} className="post-card">
           <img src={post.image} className="post-image" />
-          <h2 className="post-title">{post.title}</h2>
+          <Link to={`/post/${post.id}`}>
+            <h2 className="post-title">{post.title}</h2>
+          </Link> 
         </div>
       ))}
     </div>
