@@ -20,10 +20,13 @@ const SinglePost = () => {
   }
 
   return (
-    <div className="container">
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
-      <p>{post.tags}</p>
+    <div>
+      <h1 className="title">Single Post</h1>
+      <div className="container">
+        <h1>{post.title}</h1>
+        <p>{post.content}</p>
+        <p>{post.tags}</p>
+      </div>
     </div>
   );
 };
