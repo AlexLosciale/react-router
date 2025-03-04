@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import ciambella from "./img/ciambella.jpeg";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -20,7 +20,7 @@ const Posts = () => {
     <div className="posts-container">
       {posts.map((post) => (
         <div key={post.id} className="post-card">
-          <img src={post.image} className="post-image" />
+          <img src= {ciambella} className="post-image" />
           <Link to={`/post/${post.id}`}>
             <h2 className="post-title">{post.title}</h2>
           </Link> 

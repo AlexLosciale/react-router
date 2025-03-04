@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ciambella from "./img/ciambella.jpeg";
 
 const SinglePost = () => {
   const { id } = useParams();
@@ -23,13 +24,12 @@ const SinglePost = () => {
     <div>
       <h1 className="title">Single Post</h1>
       <div className="container">
+        <img src={ciambella} className="post-image2" />
         <h1>{post.title}</h1>
         <p>{post.content}</p>
-        <p>{post.tags}</p>
       </div>
     </div>
   );
 };
-
 export default SinglePost;
 

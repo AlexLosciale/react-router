@@ -72,3 +72,9 @@ nav ul li a:hover {
     font-size: 18px;
     font-weight: 600;
 }
+
+.post-image2{
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}

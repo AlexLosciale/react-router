@@ -5,9 +5,7 @@ import ChiSiamo from "./pages/ChiSiamo";
 import Posts from "./pages/Posts";
 import SinglePost from "./pages/SinglePost";
 
-
 function App() {
-
   return (
     <BrowserRouter>
       <Layout />
